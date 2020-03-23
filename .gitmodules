@@ -1,0 +1,3 @@
+[submodule "bookblock"]
+	path = bookblock
+	url = https://github.com/codrops/BookBlock.git
