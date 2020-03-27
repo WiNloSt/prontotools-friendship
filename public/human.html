@@ -8,10 +8,12 @@
       href="https://fonts.googleapis.com/css?family=Prompt&display=swap"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/css?family=Mali&display=swap" rel="stylesheet">
     <title>For P'Human | Pronto Tools Friendship</title>
   </head>
   <body>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
     <div class="bb-custom-wrapper">
       <div id="book" class="bb-bookblock bb-vertical">
         <div class="bb-item">
@@ -46,19 +48,21 @@
         </div>
         <div class="bb-item">
           <div class="bb-custom-side" style="background-color: #eee;">
-           <img src="https://scontent.fbkk5-4.fna.fbcdn.net/v/t31.0-8/21551861_10214268237078185_6169286355615467881_o.jpg?_nc_cat=103&_nc_sid=174925&_nc_eui2=AeEivsS6JCm4hpLYQy64l-Issq4SG7aXjSwZGNda1ID-sUJHjxaqZy7T8wenPJOcXWh31RRTYFwchHk5a_kSyxIAe6EBsk1jNq41z-2d9QXRNw&_nc_ohc=rXUkrZ_L480AX-tOrVr&_nc_ht=scontent.fbkk5-4.fna&oh=bfe276b741ab65bc23315db5c3b99554&oe=5EA3CEA1">
+            <img src="https://scontent.fbkk5-4.fna.fbcdn.net/v/t31.0-8/21551861_10214268237078185_6169286355615467881_o.jpg?_nc_cat=103&_nc_sid=174925&_nc_eui2=AeEivsS6JCm4hpLYQy64l-Issq4SG7aXjSwZGNda1ID-sUJHjxaqZy7T8wenPJOcXWh31RRTYFwchHk5a_kSyxIAe6EBsk1jNq41z-2d9QXRNw&_nc_ohc=rXUkrZ_L480AX-tOrVr&_nc_ht=scontent.fbkk5-4.fna&oh=bfe276b741ab65bc23315db5c3b99554&oe=5EA3CEA1">
           </div>
           <div class="bb-custom-side">
-            <div style="padding:10%;">
-              <h3>สวัสดีค่ะ พี่แมน</h3>
-              <h4>
-                ขอบคุณสำหรับประสบการณ์ทุกอย่างนะคะ ไม่ว่าจะเป็น สัมภาษณ์เข้าทำงานที่นี่, Retrospective, Basic Python (การบ้านยังทำไม่เสร็จเบย)
-                และก็ประสบการณ์ที่พี่เล่า ตอนไปนั่งกินเบียร์ที่คูลบาร์ค่ะ ใครจะคิดว่า จะมาเป็นเหตุการณ์จริงๆ อย่างงี้ แงงง
-              </h4>
-              <h4>
-                พี่แมนเป็นคนที่สอน Python แบบลึกๆ ได้เข้าใจมากค่ะ ไว้หนูมีตังค์ หนูจะมาเรียนด้วยนะคะ :) <br/> ปล. อยากเล่น Lasor tag จุม
-              </h4>
-              <h4>น้องมายด์ 🌻</h4>
+            <div style="padding:10%;font-family:'Mali';" id="scene">
+              <div data-depth="0.2">
+                <h3>สวัสดีค่ะ พี่แมน</h3>
+                <h4>
+                  ขอบคุณสำหรับประสบการณ์ทุกอย่างนะคะ ไม่ว่าจะเป็น สัมภาษณ์เข้าทำงานที่นี่, Retrospective, Basic Python (การบ้านยังทำไม่เสร็จเบย), Bear to the moon
+                  และก็ประสบการณ์ที่พี่เล่า ตอนไปนั่งกินเบียร์ที่คูลบาร์ค่ะ ใครจะคิดว่า จะมาเป็นเหตุการณ์จริงๆ อย่างงี้ แงงง
+                </h4>
+                <h4>
+                  พี่แมนเป็นคนที่สอน Python แบบลึกๆ ได้เข้าใจมากค่ะ ไว้หนูมีตังค์ หนูจะมาเรียนด้วยนะคะ :) <br/> ปล. อยากเล่น Lasor tag จุม
+                </h4>
+                <h4>น้องมายด์ 🌻</h4>
+              </div>
             </div>
           </div>
         </div>
@@ -202,6 +206,8 @@
     </div>
     <script src="bundle.js"></script>
     <script>
+      var scene = document.getElementById('scene');
+      var parallaxInstance = new Parallax(scene);
       const Page = (function() {
         var config = {
             $bookBlock: $('#book'),
