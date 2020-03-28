@@ -7,7 +7,9 @@
   <link href="https://fonts.googleapis.com/css?family=Itim&display=swap" rel="stylesheet">
   <title>For P'Kan | Pronto Tools Friendship</title>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Prompt&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Mali&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
 </head>
@@ -47,21 +49,22 @@
         </div>
       </div>
       <div class="bb-item">
-        <div class="bb-custom-side" style="background-color: #eee;">
-          <div>
-            <center>
-              <h1>จองงงงงง</h1>
-            </center>
-            <div>
-              <img
-                src="https://scontent.fbkk4-2.fna.fbcdn.net/v/t1.0-9/64259466_2283372501754751_2241537646461452288_n.jpg?_nc_cat=110&_nc_sid=09cbfe&_nc_eui2=AeH7-w0X6hGtjUfxKYLQuqwz5t_0ENnYc7SOIPkPEE5vWMcEl29J9edhlm34Tta8m25adrCbYU7wtzBKHu3TCE2g1Ulio8RXCxxmTslkOxpquQ&_nc_oc=AQnuzyVNyAdPdBRESS2NfKQEM0igyxYPRoPkIEVL5DLdz0QMnI8zc4_RHkJlxCnmUEw&_nc_ht=scontent.fbkk4-2.fna&oh=d7ebcf790c243d388992513d68f0ff8e&oe=5EA3E5F5"
-                width="200" height="200" />
-            </div>
-            <h2>Name : Nattaphon Bunsuwan</h2>
-          </div>
+        <div class="bb-custom-side" style="background-color: rgb(71, 90, 134);">
+          <img width="90%" style="border: 30px solid white;" src="https://scontent.fbkk5-4.fna.fbcdn.net/v/t1.0-9/48359810_2215963301768830_1953648801814151168_n.jpg?_nc_cat=103&_nc_sid=8bfeb9&_nc_eui2=AeECe9ftcUMdTbRuCV1x3ncog9CDkcDV1dqdSQO313bin1XMicc7xcDk59oVU_JF2ptYCBbkhpMAwzu2Gq6OXXmYge-WciFdWp2FjOikBKRxAw&_nc_ohc=ktAolqHmlsIAX_QQqOb&_nc_ht=scontent.fbkk5-4.fna&oh=306875171ee003d4026a39a510322a14&oe=5EA6A5DD">
         </div>
-        <div class="bb-custom-side">
-          page 3.2
+        <div class="bb-custom-side" style="background-color: rgb(43, 55, 83);color: white;">
+          <div style="padding:10%;font-family:'Mali';" id="scene">
+            <div data-depth="0.2">
+              <h4 style="font-size:40px;line-height: 120%;">ถึง...P'zkan</h4>
+              <h4 style="font-size:22px;line-height: 150%;">
+                สวัสดีค่ะ รู้สึกดีใจที่ได้เข้ามาฝึกงานในทีมแบร์ มายด์รู้สึกว่า ทีม นี้ แข็งแกร่งจริงๆ ในเรื่องของ culture ในช่วง 2 วันแรกที่เข้ามาฝึก จำได้ว่า พี่กานต์ พูดกับพี่บอบอ 
+                ว่า คุณมาฝึกงานหรือป่าวครับ ? คำนั้นเป็นคำที่เตือนสติมายด์ได้ดี จนถึงวันนี้ skill ต่างๆ ที่เพิ่มขึ้น ส่วนหนึ่งมาจากประโยคที่พี่พูดในวันนั้นค่ะ
+                <br/>ขอบคุณสำหรับการปิด sprint สุดท้ายที่สวยงาม และขอบคุณสำหรับโอกาสดีดีในทุกๆ เรื่องนะคะ
+              </h4>
+              <br/>
+              <h4>N'Mild 🌻</h4>
+            </div>
+          </div>
         </div>
       </div>
       <div class="bb-item">
@@ -238,6 +241,8 @@
   </div>
   <script src="bundle.js"></script>
   <script>
+    var scene = document.getElementById('scene');
+    var parallaxInstance = new Parallax(scene);
     const Page = (function () {
       var config = {
         $bookBlock: $("#book"),
