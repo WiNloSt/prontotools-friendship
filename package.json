@@ -19,7 +19,7 @@
     "webpack-dev-server": "^3.10.3"
   },
   "scripts": {
-    "start": "webpack-dev-server",
+    "start": "webpack-dev-server --host 0.0.0.0",
     "build": "webpack --mode production",
     "serve": "serve dist"
   }

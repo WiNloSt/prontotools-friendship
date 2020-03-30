@@ -22,7 +22,141 @@
         <img src="cover/kan-cover.png" style="height: 100vh;
         padding: 20px;"/>
       </div>
+<<<<<<< HEAD
 
+=======
+      <div class="bb-item">
+        <div id="kelvin-zkan">
+          <div class="images"></div>
+          <p class="message">
+            ถึงพี่กาน พี่กานเป็นคนที่ผมไม่เคยกลัวเลย ตลกมากที่แรกๆมีแต่คนกลัวพี่กาน แต่ผมไม่เข้าใจ feeling
+            นั้น ผมกลับรู้สึกว่าพี่กานเป็นคนที่ใส่ใจน้องๆมาก ผมยังจำวันที่ไป event
+            กับพี่วันนึงแล้วขากลับฝนตกจนพี่ต้องมาส่งที่บ้าน ทั้งๆที่ตอนแรก พี่กะจะไม่ได้ไปส่งถึงบ้านอยู่แล้ว
+            กับน้องๆ คนอื่นหลังๆ ผมก็เห็นว่าพี่กานพยายามทำตัวให้เข้าถึงได้ง่ายขึ้นแล้ว ผมก็ดีใจที่ Pronto
+            Tools มีคนที่เก่ง และคอยผลักดัน Community อยู่ในบริษัท ผมยังคำพูดพี่เมื่อ 7-8 เดือนก่อนได้เลย
+            พี่กานบอกว่าพี่กานรู้สึกเหมือนอกหัก แต่พี่กานก็เคารพในการตัดสินใจของผม และพี่กานก็จะสนับสนุนเสมอ
+            ผมก็อยากจะบอกพี่กานว่า ไม่ว่าพี่กานจะอยู่ที่ไหน พี่กานก็ยังเป็น จุดเริ่มต้นของ Pronto Tools
+            และเป็น Inspiration ให้ผมอยู่เสมอ ขอให้พี่กานยังทำ Tech team และทำ Community ไปเรื่อยๆ
+            และเจอกันอีกบ่อยๆ ตามงานต่างๆ นะครับ และก็สักวันพี่อาจจะมาชวนผมไปกิน Coco Ichibunya ใหม่นะ
+            เหมือนตอนแรกๆ 555 ขอบคุณทุกสิ่งทุกอย่างที่พี่กานมอบให้พวกเราชาว Pronto Tools
+            ขอให้พี่กานโชคดีนะฮับ จากแมวนั้ม
+          </p>
+          <script>
+            ;(function() {
+              const imagesElement = document.querySelector('#kelvin-zkan > .images')
+        
+              const images = [
+                '/kelvin/zkan/3-selfie.jpg',
+                '/kelvin/zkan/code-mania.jpg',
+                '/kelvin/zkan/eat-out.jpg',
+                '/kelvin/zkan/pronto-tools-3rd-fl.jpg',
+                '/kelvin/zkan/sleep.jpg',
+                '/kelvin/zkan/studio-soi-6.jpg',
+                '/kelvin/zkan/sushi-oo.jpg'
+              ]
+              const maxWidthOrHeight = 200
+        
+              function render() {
+                let count = 0
+                let previousImageUrl = ''
+                const breakCount = 40
+                while (count < breakCount) {
+                  previousImageUrl = renderImage(previousImageUrl)
+                  count++
+                }
+              }
+        
+              function renderImage(previousImageUrl) {
+                let randomImageUrl = getRandomImage()
+                while (randomImageUrl === previousImageUrl) {
+                  randomImageUrl = getRandomImage()
+                }
+                const img = document.createElement('img')
+                img.src = randomImageUrl
+        
+                const imageSize = getRandomImageSize()
+                img.style['max-width'] = imageSize + 'px'
+                img.style['max-height'] = imageSize + 'px'
+                const div = document.createElement('div')
+                div.className = 'image-container'
+                div.style.transform = `rotate(${getRandomAngle()}deg)`
+                div.append(img)
+                imagesElement.append(div)
+                imagesElement.classList.add('rendered')
+        
+                return randomImageUrl
+              }
+        
+              function getRandomImage() {
+                const randomIndex = Math.floor(images.length * Math.random())
+                return images[randomIndex]
+              }
+        
+              function getRandomImageSize() {
+                const deviceWidth = document.documentElement.clientWidth
+                const minSize = Math.max(0.13 * deviceWidth, 100)
+                const maxSize = Math.max(0.2 * deviceWidth, 150)
+                return Math.floor(Math.random() * (maxSize - minSize) + minSize)
+              }
+        
+              function getRandomAngle() {
+                const ANGLE = 30
+                const minAngle = -ANGLE
+                const maxAngle = ANGLE
+                return Math.random() * (maxAngle - minAngle) + minAngle
+              }
+        
+              if (!imagesElement.classList.contains('rendered')) {
+                const deviceWidth = document.documentElement.clientWidth
+                const maxSize = Math.max(0.2 * deviceWidth, 150)
+                const startingCornerMargin = `-${maxSize / 4}px`
+                const endingCornerMargin = `-${maxSize}px`
+        
+                imagesElement.style.margin = `${startingCornerMargin} ${endingCornerMargin} ${endingCornerMargin} ${startingCornerMargin}`
+                imagesElement.style.transform = `translate(${maxSize / 2})`
+                render()
+              }
+            })()
+          </script>
+          <style>
+            #kelvin-zkan {
+              overflow: hidden;
+              display: flex;
+              height: 100%;
+              align-items: center;
+              justify-content: center;
+            }
+        
+            #kelvin-zkan .message {
+              font-size: 18px;
+              max-width: 700px;
+              background: #f28c8b;
+              color: white;
+              opacity: 0.9;
+              padding: 1.5em 2em;
+              border-radius: 8px;
+            }
+        
+            #kelvin-zkan img {
+              padding: 0;
+              object-fit: contain;
+              width: 100%;
+              height: 100%;
+            }
+        
+            #kelvin-zkan .image-container {
+              display: inline-block;
+            }
+        
+            #kelvin-zkan > .images {
+              position: absolute;
+            }
+          </style>
+        </div>
+        
+      </div>
+     
+>>>>>>> :sparkles: Add kelvin pages
       <div class="bb-item">
         <div class="bb-custom-side" style="background-color: rgb(71, 90, 134);">
           <img width="90%" src="https://scontent.fbkk5-4.fna.fbcdn.net/v/t1.0-9/48359810_2215963301768830_1953648801814151168_n.jpg?_nc_cat=103&_nc_sid=8bfeb9&_nc_eui2=AeECe9ftcUMdTbRuCV1x3ncog9CDkcDV1dqdSQO313bin1XMicc7xcDk59oVU_JF2ptYCBbkhpMAwzu2Gq6OXXmYge-WciFdWp2FjOikBKRxAw&_nc_ohc=ktAolqHmlsIAX_QQqOb&_nc_ht=scontent.fbkk5-4.fna&oh=306875171ee003d4026a39a510322a14&oe=5EA6A5DD">
