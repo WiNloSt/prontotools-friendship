@@ -22,7 +22,7 @@
         <h1>Natty's Friendship</h1>
       </div>
       <div class="bb-item">
-        <div class="whole-page">
+        <div id='kelvin-natty'>
           <h2>whole page</h2>
           <style>
             .whole-page {
@@ -39,6 +39,31 @@
               font-size: 50px;
             }
           </style>
+          <script>
+            const pageElement = $('#kelvin-natty')
+            const images = [
+              '/public/kelvin/natty/buy-laptop.jpg',
+              '/public/kelvin/natty/mamegoma-team.jpg',
+              '/public/kelvin/natty/presenter.jpg',
+              '/public/kelvin/natty/pronto-tools-3rd-fl.jpg',
+              '/public/kelvin/natty/selfie-1.jpg',
+              '/public/kelvin/natty/selfie-students.jpg',
+              '/public/kelvin/natty/studio-soi-6.jpg',
+              '/public/kelvin/natty/vedeo-call.jpg',
+            ]
+            const maxWidthOrHeight = 200
+
+            function render() {
+              
+            }
+
+            function getRandomImage() {
+              const randomIndex = Math.floor(images.length * Math.random())
+              return images[randomIndex]
+            }
+            
+            render()
+          </script>
         </div>
       </div>
       <div class="bb-item">
