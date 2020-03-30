@@ -22,11 +22,15 @@
     <div class="bb-custom-wrapper">
       <div id="book" class="bb-bookblock bb-vertical">
         <div class="bb-item">
-          <h1>Natty's Friendship</h1>
+          <div class="d-flex justify-content-center bb-custom-side" style="background-color: #bedde0;">
+            <img src="cover/natty-cover.png" style="height: 100vh;
+            padding: 20px;" />
+          </div>
+          <div class="bb-custom-side" style="background-color: #bedde0;"></div>
         </div>
         <div class="bb-item">
           <div id="kelvin-natty">
-            <div class='images'></div>
+            <div class="images"></div>
             <p class="message">
               ถึงพี่เกร๋ พี่เกร๋เป็นคนที่สัมภาษณ์ผมเข้ามาเอง พี่เกร๋บอกว่าผมกวนตีนเพราะแค่ผมบอกว่า
               ผมเขียนเทสไงเพราะผมทำ TDD 5555 ผมยังจำได้เลย ผมไม่ได้ตั้งใจกวนตีนพี่จริงๆ นะ
@@ -52,30 +56,6 @@
               ;(function() {
                 const imagesElement = document.querySelector('#kelvin-natty > .images')
 
-<<<<<<< HEAD
-<body>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
-  <div class="bb-custom-wrapper">
-    <div id="book" class="bb-bookblock bb-vertical">
-      <div class="d-flex justify-content-center bb-item" style="background-color: #bedde0;">
-        <img src="cover/natty-cover.png" style="height: 100vh;
-        padding: 20px;" />
-      </div>
-      <div class="bb-item">
-        <div id='kelvin-natty'>
-          <h2>whole page</h2>
-          <style>
-            .whole-page {
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              height: 100%;
-              background-image: url(background.jpg);
-              background-size: cover;
-              background-position: center;
-            }
-=======
                 const images = [
                   '/kelvin/natty/buy-laptop.jpg',
                   '/kelvin/natty/mamegoma-team.jpg',
@@ -87,7 +67,6 @@
                   '/kelvin/natty/video-call.jpg'
                 ]
                 const maxWidthOrHeight = 200
->>>>>>> :sparkles: Add kelvin pages
 
                 function render() {
                   let count = 0
@@ -97,28 +76,8 @@
                     previousImageUrl = renderImage(previousImageUrl)
                     count++
                   }
-                  }
+                }
 
-<<<<<<< HEAD
-            function render() {
-
-            }
-
-            function getRandomImage() {
-              const randomIndex = Math.floor(images.length * Math.random())
-              return images[randomIndex]
-            }
-
-            render()
-          </script>
-        </div>
-      </div>
-
-      <div class="bb-item">
-        <div class="bb-custom-side p-5" style="background-color: #eee;">
-          <div style="padding:10%;">
-            <div>
-=======
                 function renderImage(previousImageUrl) {
                   let randomImageUrl = getRandomImage()
                   while (randomImageUrl === previousImageUrl) {
@@ -164,7 +123,7 @@
                   const maxSize = Math.max(0.2 * deviceWidth, 150)
                   const startingCornerMargin = `-${maxSize / 4}px`
                   const endingCornerMargin = `-${maxSize}px`
-                  
+
                   imagesElement.style.margin = `${startingCornerMargin} ${endingCornerMargin} ${endingCornerMargin} ${startingCornerMargin}`
                   imagesElement.style.transform = `translate(${maxSize / 2})`
                   render()
@@ -176,14 +135,14 @@
                 overflow: hidden;
                 display: flex;
                 height: 100%;
-                align-items:center;
+                align-items: center;
                 justify-content: center;
               }
 
               #kelvin-natty .message {
                 font-size: 18px;
                 max-width: 700px;
-                background:#f28c8b;
+                background: #f28c8b;
                 color: white;
                 opacity: 0.9;
                 padding: 1.5em 2em;
@@ -207,11 +166,10 @@
             </style>
           </div>
         </div>
-        
+
         <div class="bb-item">
           <div class="bb-custom-side p-5" style="background-color: #eee;">
             <div style="padding:10%;">
->>>>>>> :sparkles: Add kelvin pages
               <div>
                 <div>
                   <center>
@@ -528,89 +486,84 @@
     </div>
     <script src="bundle.js"></script>
     <script>
-      var scene = document.getElementById('scene')
-      var parallaxInstance = new Parallax(scene)
-      const Page = (function() {
-        var config = {
-            $bookBlock: $('#book'),
-            $navNext: $('#bb-nav-next'),
-            $navPrev: $('#bb-nav-prev'),
-            $navFirst: $('#bb-nav-first'),
-            $navLast: $('#bb-nav-last')
-          },
-          init = function() {
-            config.$bookBlock.bookblock({
-              speed: 1000,
-              shadowSides: 0.8,
-              shadowFlip: 0.4
-            })
-            initEvents()
-          },
-          initEvents = function() {
-            var $slides = config.$bookBlock.children()
+            var scene = document.getElementById('scene')
+            var parallaxInstance = new Parallax(scene)
+            const Page = (function() {
+              var config = {
+                  $bookBlock: $('#book'),
+                  $navNext: $('#bb-nav-next'),
+                  $navPrev: $('#bb-nav-prev'),
+                  $navFirst: $('#bb-nav-first'),
+                  $navLast: $('#bb-nav-last')
+                },
+                init = function() {
+                  config.$bookBlock.bookblock({
+                    speed: 1000,
+                    shadowSides: 0.8,
+                    shadowFlip: 0.4
+                  })
+                  initEvents()
+                },
+                initEvents = function() {
+                  var $slides = config.$bookBlock.children()
 
-            // add navigation events
-            config.$navNext.on('click touchstart', function() {
-              config.$bookBlock.bookblock('next')
-              return false
-            })
+                  // add navigation events
+                  config.$navNext.on('click touchstart', function() {
+                    config.$bookBlock.bookblock('next')
+                    return false
+                  })
 
-            config.$navPrev.on('click touchstart', function() {
-              config.$bookBlock.bookblock('prev')
-              return false
-            })
+                  config.$navPrev.on('click touchstart', function() {
+                    config.$bookBlock.bookblock('prev')
+                    return false
+                  })
 
-            config.$navFirst.on('click touchstart', function() {
-              config.$bookBlock.bookblock('first')
-              return false
-            })
+                  config.$navFirst.on('click touchstart', function() {
+                    config.$bookBlock.bookblock('first')
+                    return false
+                  })
 
-            config.$navLast.on('click touchstart', function() {
-              config.$bookBlock.bookblock('last')
-              return false
-            })
+                  config.$navLast.on('click touchstart', function() {
+                    config.$bookBlock.bookblock('last')
+                    return false
+                  })
 
-            // add swipe events
-            $slides.on({
-              swipeleft: function(event) {
-                config.$bookBlock.bookblock('next')
-                return false
-              },
-              swiperight: function(event) {
-                config.$bookBlock.bookblock('prev')
-                return false
-              }
-            })
+                  // add swipe events
+                  $slides.on({
+                    swipeleft: function(event) {
+                      config.$bookBlock.bookblock('next')
+                      return false
+                    },
+                    swiperight: function(event) {
+                      config.$bookBlock.bookblock('prev')
+                      return false
+                    }
+                  })
 
-            // add keyboard events
-            $(document).keydown(function(e) {
-              var keyCode = e.keyCode || e.which,
-                arrow = {
-                  left: 37,
-                  up: 38,
-                  right: 39,
-                  down: 40
+                  // add keyboard events
+                  $(document).keydown(function(e) {
+                    var keyCode = e.keyCode || e.which,
+                      arrow = {
+                        left: 37,
+                        up: 38,
+                        right: 39,
+                        down: 40
+                      }
+
+                    switch (keyCode) {
+                      case arrow.left:
+                        config.$bookBlock.bookblock('prev')
+                        break
+                      case arrow.right:
+                        config.$bookBlock.bookblock('next')
+                        break
+                    }
+                  })
                 }
 
-              switch (keyCode) {
-                case arrow.left:
-                  config.$bookBlock.bookblock('prev')
-                  break
-                case arrow.right:
-                  config.$bookBlock.bookblock('next')
-                  break
-              }
-            })
-          }
-
-        return { init: init }
-      })()
-
-<<<<<<< HEAD
-</html>
-=======
-      Page.init()
+              return { init: init }
+            })()
+            Page.init()
     </script>
   </body>
 </html>
->>>>>>> :sparkles: Add kelvin pages
