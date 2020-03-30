@@ -13,6 +13,7 @@
   <link href="https://fonts.googleapis.com/css?family=Sarabun&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -44,7 +45,7 @@
           <script>
             ;(function() {
               const imagesElement = document.querySelector('#kelvin-zkan > .images')
-        
+
               const images = [
                 '/kelvin/zkan/3-selfie.jpg',
                 '/kelvin/zkan/code-mania.jpg',
@@ -55,7 +56,7 @@
                 '/kelvin/zkan/sushi-oo.jpg'
               ]
               const maxWidthOrHeight = 200
-        
+
               function render() {
                 let count = 0
                 let previousImageUrl = ''
@@ -65,7 +66,7 @@
                   count++
                 }
               }
-        
+
               function renderImage(previousImageUrl) {
                 let randomImageUrl = getRandomImage()
                 while (randomImageUrl === previousImageUrl) {
@@ -73,7 +74,7 @@
                 }
                 const img = document.createElement('img')
                 img.src = randomImageUrl
-        
+
                 const imageSize = getRandomImageSize()
                 img.style['max-width'] = imageSize + 'px'
                 img.style['max-height'] = imageSize + 'px'
@@ -83,35 +84,35 @@
                 div.append(img)
                 imagesElement.append(div)
                 imagesElement.classList.add('rendered')
-        
+
                 return randomImageUrl
               }
-        
+
               function getRandomImage() {
                 const randomIndex = Math.floor(images.length * Math.random())
                 return images[randomIndex]
               }
-        
+
               function getRandomImageSize() {
                 const deviceWidth = document.documentElement.clientWidth
                 const minSize = Math.max(0.13 * deviceWidth, 100)
                 const maxSize = Math.max(0.2 * deviceWidth, 150)
                 return Math.floor(Math.random() * (maxSize - minSize) + minSize)
               }
-        
+
               function getRandomAngle() {
                 const ANGLE = 30
                 const minAngle = -ANGLE
                 const maxAngle = ANGLE
                 return Math.random() * (maxAngle - minAngle) + minAngle
               }
-        
+
               if (!imagesElement.classList.contains('rendered')) {
                 const deviceWidth = document.documentElement.clientWidth
                 const maxSize = Math.max(0.2 * deviceWidth, 150)
                 const startingCornerMargin = `-${maxSize / 4}px`
                 const endingCornerMargin = `-${maxSize}px`
-        
+
                 imagesElement.style.margin = `${startingCornerMargin} ${endingCornerMargin} ${endingCornerMargin} ${startingCornerMargin}`
                 imagesElement.style.transform = `translate(${maxSize / 2})`
                 render()
@@ -126,7 +127,7 @@
               align-items: center;
               justify-content: center;
             }
-        
+
             #kelvin-zkan .message {
               font-size: 18px;
               max-width: 700px;
@@ -136,26 +137,26 @@
               padding: 1.5em 2em;
               border-radius: 8px;
             }
-        
+
             #kelvin-zkan img {
               padding: 0;
               object-fit: contain;
               width: 100%;
               height: 100%;
             }
-        
+
             #kelvin-zkan .image-container {
               display: inline-block;
             }
-        
+
             #kelvin-zkan > .images {
               position: absolute;
             }
           </style>
         </div>
-        
+
       </div>
-     
+
       <div class="bb-item">
         <div class="bb-custom-side" style="background-color: rgb(71, 90, 134);">
           <img width="90%" src="https://scontent.fbkk5-4.fna.fbcdn.net/v/t1.0-9/48359810_2215963301768830_1953648801814151168_n.jpg?_nc_cat=103&_nc_sid=8bfeb9&_nc_eui2=AeECe9ftcUMdTbRuCV1x3ncog9CDkcDV1dqdSQO313bin1XMicc7xcDk59oVU_JF2ptYCBbkhpMAwzu2Gq6OXXmYge-WciFdWp2FjOikBKRxAw&_nc_ohc=ktAolqHmlsIAX_QQqOb&_nc_ht=scontent.fbkk5-4.fna&oh=306875171ee003d4026a39a510322a14&oe=5EA6A5DD">
@@ -426,6 +427,22 @@
       </div>
       <div class="bb-item" style="background-image: url(/gomgam/zkan.png);display: block;background-size: contain;background-repeat: no-repeat;background-position: center;">
       </div>
+      <div class="bb-item thor">
+        <div class="bb-custom-side" style="background-color: #201c20">
+            <img src="/thor/thor-to-zkan.png" alt="thor-to-p-zkan">
+        </div>
+        <div class="bb-custom-side" style="background-color: #201c20f0">
+          <div style="text-align: right;">
+          <h1 style="font-family: 'Pacifico', cursive; color: #e8d9ca; padding-right: 60px;">From Thohirah...    </h1>
+          <p style="font-family: 'Mali'; font-size: 20px; color: #e8d9ca; padding-top: 15px; padding-bottom: 0px;">
+            พี่! พี่ทำได้ยังไง พี่เป็นพี่ทุกวันนี้ได้ยังไง พี่ดูแลพวกเรา คอยสอน คอยเตือน เด็กดื้อๆได้ไง หลายอย่างที่พี่เคยสอน หนูเริ่มค่อยๆเข้าใจมันทีละน้อยและย้อนกลับมาคิดตลอดว่า
+            มันคือสิ่งที่พี่บอกมาตลอด วันแรกที่หนูก้าวเข้ามาที่นี่การเจอพี่มันทำให้วันแรกมันสุดยอด วันแรกพี่โครตใจดี ทุกวันนี้ก็ใจดี น่ะ แต่ไม่ค่อยแสดงออก อิ จะให้มาอธิบายล้านปีก็คงไม่หมดว่าหนูรู้สึกขอบคุณพี่แค่ไหน
+            รักพี่ พี่อยู่คอยตักเตือน ชี้นำพวกเรา เป็นร่มโพธิ์ ร่มไทร ไปเรื่อยๆนะ พร้อมลุยทุก Community เย้ 💪🏻 ปล. หนี้ความรู้ที่ติดไว้ หนูจะติดไว้ และจะติดเพิ่มไปอีกเรื่อยๆ จนกว่าจะมีโอกาสได้ส่งต่อ
+          </p>
+          <p style="font-family:'Pacifico', cursive; color: #e8d9ca; text-align: right;">To my beloved Brother, <br>Zkan 🐻</p>
+         </div>
+       </div>
+    </div>
     </div>
     <nav>
       <a id="bb-nav-first" href="#" class="bb-custom-icon bb-custom-icon-first">First page</a>
